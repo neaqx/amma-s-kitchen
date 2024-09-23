@@ -202,7 +202,7 @@ Menu Items:
 
 ## **TESTING**
 
-- Testing and results can be found [here](TESTING.md)
+- Testing and results can be found [here](Testing.md)
 - Manual tests were carried out throughout the process.
 - Responsiveness has been checked and adjusted in Chrome Dev Tools and the site has been viewed on mobiles and an mac without issues.
 
