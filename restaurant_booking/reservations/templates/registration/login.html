@@ -1,27 +1,44 @@
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amma's Kitchen</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
 {% include 'header.html' %}
 <div class="container mt-5">
-    <h2>Login</h2>
-    
-   
-    {% if messages %}
-        <div class="alert alert-danger">
-            {% for message in messages %}
-                <p>{{ message }}</p>
-            {% endfor %}
+    <div class="login-container">
+        <h2 class="text-center">Login</h2>
+
+        
+        {% if messages %}
+            <div class="alert alert-danger">
+                {% for message in messages %}
+                    <p>{{ message }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" name="username" class="form-control" id="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" class="form-control" id="password" required>
+            </div>
+            <button type="submit" class="btn btn-success btn-block">Login</button>
+        </form>
+
+     
+         <div class="text-center mt-3">
+            <p>Don't have an account? <a href="{% url 'register' %}">Register here</a></p> 
         </div>
-    {% endif %}
-    
-    <form method="POST">
-        {% csrf_token %}
-        <div class="form-group">
-            <label for="username">Username</label>
-            <input type="text" name="username" class="form-control" id="username" required>
-        </div>
-        <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" name="password" class="form-control" id="password" required>
-        </div>
-        <button type="submit" class="btn btn-success">Login</button>
-    </form>
+    </div>
 </div>
 {% include 'footer.html' %}
+
