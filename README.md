@@ -15,7 +15,7 @@ We are open daily from 11:00 AM to 10:00 PM, ready to serve you an unforgettable
 
 Make a reservation now and discover a new world of flavor at Amma's Kitchen!
 
-View live website here: [Happy Hacks]().
+View live website here: [ammas kitchen]().
 
 <hr>
 
@@ -32,8 +32,7 @@ View live website here: [Happy Hacks]().
   * [Footer](#footer)
   * [Home Page](#home-page)
   * [Booking Page](#add-hack-page)
-  * [May resevation Page](#hacks-page)
-  * [CRUD Functionality](#crud-functionality)
+  * [My resevation Page](#hacks-page)
 - [**Testing**](#testing)
 - [**Bugs**](#bugs)
 - [**Technologies Used**](#technology-used)
