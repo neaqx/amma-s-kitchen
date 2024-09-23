@@ -1,7 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amma's Kitchen</title>
+ 
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">  
+</head>
+<body>
 {% include 'header.html' %}
-
-<!-- Hero Section -->
-{% comment %} <div class="hero-section" style="background-image: url('{% static 'images/hero-background.jpg' %}');"> {% endcomment %}
+<div class="hero-section" style="background-image: url('{% static 'images/valentin-kremer-S8BhJ0HB-WQ-unsplash.jpg' %}');">
     <div class="hero-content text-center">
         <h1 class="display-4 text-white">Welcome to Amma's Kitchen</h1>
         <p class="lead text-white">Experience the fusion of European and Asian cuisine.</p>
@@ -11,9 +20,12 @@
 
 <div class="container mt-5">
     <h2>Who we are</h2>
-    <p>Our restaurant is open from 11:00 AM to 10:00 PM every day. We have an international presence. From Berlin to Tokyo, we bring our cuisine to the whole world. Make a reservation now to secure your table </p>
+    <p>Our restaurant welcomes you daily from 11:00 AM to 10:00 PM, offering a unique dining experience that transcends borders. With locations across the globe, from the vibrant streets of Berlin to the bustling heart of Tokyo, we proudly bring our authentic cuisine to food lovers everywhere. Don’t miss out—book your table today and indulge in flavors that unite the world on a single plate! </p>
     <a href="{% url 'make_reservation' %}" class="btn btn-success btn-lg">Reserve a Table</a>
+    <div>
+    <div>
 </div>
 
 {% include 'footer.html' %}
+
 

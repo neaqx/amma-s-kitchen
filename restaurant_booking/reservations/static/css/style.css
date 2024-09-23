@@ -1,0 +1,41 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+  
+}
+.hero-section {
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 120px;
+    border-radius: 10px;
+    text-align: center;
+    /* Text zentrieren */
+}
+
+.hero-content h1,
+.hero-content p {
+    margin: 0 0 10px;
+}
+
+.btn-lg {
+    padding: 10px 30px;
+    font-size: 1.2em;
+}
+
+.conatiner {
+    height: 100vh;
+}
