@@ -110,6 +110,9 @@ View live website here: [ammas kitchen]().
 - Footer: Contains contact information, social media links, and legal information (e.g., terms, privacy policy).
 
 ![Add Homepage](/restaurant_booking/reservations/static/docs/home.png)
+![Add Homepage](/restaurant_booking/reservations/static/docs/home2.png)
+![Add Homepage](/restaurant_booking/reservations/static/docs/home3.png)
+
 
 <hr>
 
