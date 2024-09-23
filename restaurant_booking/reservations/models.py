@@ -1,37 +1,27 @@
 from django.db import models
 from django.contrib.auth.models import User
+from datetime import datetime
 
 class Table(models.Model):
-    number = models.IntegerField(unique=True)
-    capacity = models.IntegerField()
+    number = models.IntegerField()
+    seats = models.IntegerField()
 
     def __str__(self):
-        return f"Table {self.number} (Seats {self.capacity})"
+        return f"Table {self.number} - {self.seats} seats"
 
 class Reservation(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     table = models.ForeignKey(Table, on_delete=models.CASCADE)
+    guests = models.IntegerField()
     date = models.DateField()
     time = models.TimeField()
-    party_size = models.IntegerField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        unique_together = ('table', 'date', 'time')  # Prevent double bookings
 
     def __str__(self):
-        return f"Reservation for {self.user.username} on {self.date} at {self.time}"
+        return f"Reservation for {self.guests} guests on {self.date} at {self.time}"
 
-    def save(self, *args, **kwargs):
-        
-        existing_reservations = Reservation.objects.filter(
-            date=self.date, time=self.time, table=self.table
-        )
-        if existing_reservations.exists():
-            raise ValueError("This table is already booked at the chosen time.")
-        super().save(*args, **kwargs)
 
-class MenuItem(models.Model):
-    name = models.CharField(max_length=100)
-    description = models.TextField()
-    price = models.DecimalField(max_digits=6, decimal_places=2)
-
-    def __str__(self):
-        return self.name
 

@@ -1,7 +1,9 @@
 from django.urls import path
-from django.views.generic import TemplateView
 from . import views
 
 urlpatterns = [
-    path("", TemplateView.as_view(template_name="reservations/home.html")),
+    path('make/', views.make_reservation, name='make_reservation'),
+    path('my/', views.my_reservations, name='my_reservations'),
+    path('cancel/<int:pk>/', views.cancel_reservation, name='cancel_reservation'),
 ]
+

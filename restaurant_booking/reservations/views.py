@@ -1,38 +1,41 @@
 from django.shortcuts import render, redirect
-from django.contrib import messages
-from .models import Reservation, Table, MenuItem
+from .models import Reservation, Table
 from .forms import ReservationForm
+from django.contrib.auth.decorators import login_required
+from datetime import datetime
 
-def home(request):
-    menu_items = MenuItem.objects.all()
-    return render(request, 'home.html', {'menu_items': menu_items})
-
-def create_reservation(request):
-    if request.method == 'POST':
+@login_required
+def make_reservation(request):
+    if request.method == "POST":
         form = ReservationForm(request.POST)
         if form.is_valid():
-            try:
-                reservation = form.save(commit=False)
-                reservation.user = request.user
-                reservation.save()
-                messages.success(request, "Reservation created successfully!")
-                return redirect('home')
-            except ValueError as e:
-                form.add_error(None, e)
+       
+            reservation = form.save(commit=False)
+            conflicting_reservations = Reservation.objects.filter(
+                table=reservation.table, date=reservation.date, time=reservation.time
+            )
+            if conflicting_reservations.exists():
+                return render(request, 'reservations/reservation_form.html', {'form': form, 'error': 'Double booking!'})
+            
+            reservation.user = request.user
+            reservation.save()
+            return redirect('my_reservations')
     else:
         form = ReservationForm()
-    return render(request, 'reservation_form.html', {'form': form})
+    return render(request, 'reservations/reservation_form.html', {'form': form})
 
+@login_required
 def my_reservations(request):
     reservations = Reservation.objects.filter(user=request.user)
-    return render(request, 'my_reservations.html', {'reservations': reservations})
+    return render(request, 'reservations/my_reservations.html', {'reservations': reservations})
 
+@login_required
 def cancel_reservation(request, pk):
-    reservation = Reservation.objects.get(pk=pk, user=request.user)
-    if reservation:
+    reservation = Reservation.objects.get(pk=pk)
+    if reservation.user == request.user:
         reservation.delete()
-        messages.success(request, "Reservation canceled.")
     return redirect('my_reservations')
+
 
 
 
