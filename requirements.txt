@@ -1,44 +1,23 @@
-# PyTorch (neueste stabile Version)
-torch==2.4.1
-
-# Django und verwandte Pakete
+# Kernabhängigkeiten
 Django==4.2.16
-django-bootstrap-v5==1.0.11
-django-forms-bootstrap==3.1.0
-django-heroku==0.3.1
 gunicorn==20.1.0
 whitenoise==6.5.0
 
 # Datenbank
 dj-database-url==2.2.0
-psycopg2==2.9.9
+psycopg2-binary==2.9.9
 
-# Wissenschaftliche Bibliotheken
+# PyTorch (nur CPU-Version)
+--find-links https://download.pytorch.org/whl/torch_stable.html
+torch==2.4.1+cpu
+
+# Wissenschaftliche Bibliotheken (Minimal-Set)
 numpy==1.24.3
 pandas==1.5.3
-scipy==1.10.1
-scikit-learn==1.3.0
 
-# Datenvisualisierung
-matplotlib==3.7.1
-seaborn==0.12.2
-plotly==5.15.0
-
-# Jupyter und verwandte Pakete
-jupyter==1.0.0
-jupyterlab==4.0.2
-ipykernel==6.23.1
-
-# Utility-Pakete
+# Andere essenzielle Abhängigkeiten
 requests==2.31.0
-Pillow==9.5.0
 python-dateutil==2.8.2
 pytz==2023.3
 
-# Entwicklungswerkzeuge
-debugpy==1.6.7
-
-# Andere Abhängigkeiten (reduziert auf essenzielle)
-beautifulsoup4==4.12.2
-networkx==3.1
-sympy==1.12
+# Fügen Sie hier andere spezifische Abhängigkeiten hinzu, die Ihre Anwendung unbedingt benötigt
