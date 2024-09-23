@@ -1,12 +1,36 @@
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amma's Kitchen</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
 {% include 'header.html' %}
-<h1>Your Reservations</h1>
-<ul>
-    {% for reservation in reservations %}
-        <li>
-            Reservation on {{ reservation.date }} at {{ reservation.time }} for {{ reservation.party_size }} people
-            at {{ reservation.table }} 
-            <a href="{% url 'cancel_reservation' reservation.id %}">Cancel</a>
-        </li>
-    {% endfor %}
-</ul>
+
+<div class="container mt-5">
+    <div class="reservations-container">
+        <h1 class="text-center">Your Reservations</h1>
+
+        <ul class="list-group">
+            {% for reservation in reservations %}
+                <li class="list-group-item reservation-item">
+                    <div class="reservation-details">
+                        <p>
+                            Reservation on <strong>{{ reservation.date }}</strong> at <strong>{{ reservation.time }}</strong> 
+                            for <strong>{{ reservation.guests }}</strong> people at <strong>{{ reservation.table }}</strong>.
+                        </p>
+                        <a href="{% url 'cancel_reservation' reservation.id %}" class="btn btn-danger btn-sm cancel-btn">Cancel</a>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+
+        <!-- Neuer Buchungs-Button -->
+        <div class="text-center mt-4">
+            <a href="{% url 'make_reservation' %}" class="btn btn-success">New Reservation</a>
+        </div>
+    </div>
+</div>
+
 {% include 'footer.html' %}

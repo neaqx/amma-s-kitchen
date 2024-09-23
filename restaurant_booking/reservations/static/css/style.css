@@ -93,6 +93,10 @@ body {
     color: white;
 }
 
+.custom-toggler.navbar-toggler {
+    border-color: white;
+}
+
 
 /* Styling Login-Formular */
 .login-container {
@@ -128,3 +132,83 @@ body {
 .text-center p {
     margin-top: 20px;
 }
+
+
+/* Styling für das Registrierungsformular */
+.register-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.register-container h2 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-center p {
+    margin-top: 20px;
+}
+
+
+/* Styling für das Reservierungsformular */
+.reservation-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.reservation-container p {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+

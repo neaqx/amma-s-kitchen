@@ -12,13 +12,13 @@ class Table(models.Model):
 class Reservation(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     table = models.ForeignKey(Table, on_delete=models.CASCADE)
-    guests = models.IntegerField()
+    guests = models.IntegerField(max_length=10)
     date = models.DateField()
     time = models.TimeField()
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        unique_together = ('table', 'date', 'time')  # Verhindert Doppelbuchungen
+        unique_together = ('table', 'date', 'time')  
 
     def __str__(self):
         return f"Reservation for {self.guests} guests on {self.date} at {self.time}"
