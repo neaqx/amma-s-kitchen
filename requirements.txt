@@ -20,4 +20,3 @@ requests==2.31.0
 python-dateutil==2.8.2
 pytz==2023.3
 
-# Fügen Sie hier andere spezifische Abhängigkeiten hinzu, die Ihre Anwendung unbedingt benötigt

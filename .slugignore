@@ -1,0 +1,50 @@
+# Ignoriere Entwicklungs- und Test-Dateien
+*.pyc
+*.pyo
+*.pyd
+__pycache__
+.pytest_cache
+
+# Ignoriere Dokumentation
+*.md
+docs/
+
+# Ignoriere Versionskontrolle
+.git
+.gitignore
+
+# Ignoriere Entwicklungsumgebung-spezifische Dateien
+.vscode/
+.idea/
+
+# Ignoriere Beispiel- und Testdaten
+examples/
+tests/
+*.csv
+*.json
+
+# Ignoriere statische Dateien (falls diese separat gehandhabt werden)
+# static/
+
+# Ignoriere Medien-Dateien (falls diese separat gehandhabt werden)
+# media/
+
+# Ignoriere Jupyter Notebooks
+*.ipynb
+
+# Ignoriere virtuelle Umgebungen
+venv/
+*.venv
+env/
+*.env
+
+# Ignoriere Logs
+*.log
+
+# Ignoriere Backup-Dateien
+*.bak
+
+# Ignoriere temporäre Dateien
+*.tmp
+*.temp
+
