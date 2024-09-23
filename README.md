@@ -110,7 +110,7 @@ View live website here: [Happy Hacks]().
 - Mobile-Friendly Design: Responsive layout that adjusts seamlessly to different screen sizes.
 - Footer: Contains contact information, social media links, and legal information (e.g., terms, privacy policy).
 
-![Add Homepage](/)
+![Add Homepage](/restaurant_booking/reservations/static/docs/home.png)
 
 <hr>
 
@@ -127,14 +127,14 @@ Menu Items:
 - Mobile Menu Toggler: A hamburger icon appears on mobile devices to toggle the menu.
 - Hover and Active Effects: Menu items highlight when hovered or clicked, making navigation more user-friendly.
 
-![Hacks Page](/)
+![Hacks Page](/restaurant_booking/reservations/static/docs/navbar.png)
 
 <hr>
 
 ### **Footer**
 - Located at the bottom of the page the footer loads text with copyright information.
 
-![Footer](/)
+![Footer](/restaurant_booking/reservations/static/docs/footer.png)
 
 <hr>
 
@@ -166,7 +166,7 @@ Menu Items:
 - User Authentication: Requires the user to be logged in to view and manage their reservations.
 - Friendly Notifications: Provides feedback (e.g., "Reservation successfully canceled") after actions like cancellation or modification.
 
-![my reservation](/)
+![my reservation](/restaurant_booking/reservations/static/docs/my_reservations.png)
 
 <hr>
 
@@ -181,7 +181,7 @@ Menu Items:
 - Register Link: Includes a link to the registration page for new users ("Don't have an account? Register here").
 - Responsive Design: Optimized for both desktop and mobile, ensuring easy login on all devices.
 
-![Login](/)
+![Login](/restaurant_booking/reservations/static/docs/login.png)
 ---
 
 ### **Register Page**
@@ -195,7 +195,7 @@ Menu Items:
 - Success Confirmation: After successful registration, redirects the user to a confirmation page or logs them in automatically.
 - Responsive Design: Designed for both desktop and mobile screens, ensuring a smooth registration experience on any device.
 
-![Login](/)
+![register](/restaurant_booking/reservations/static/docs/register.png)
 
 
 ## **TESTING**
