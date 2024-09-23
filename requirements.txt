@@ -7,9 +7,9 @@ whitenoise==6.5.0
 dj-database-url==2.2.0
 psycopg2-binary==2.9.9
 
-# PyTorch (nur CPU-Version)
---find-links https://download.pytorch.org/whl/torch_stable.html
-torch==2.4.1+cpu
+# PyTorch (CPU-Version)
+--find-links https://download.pytorch.org/whl/cpu
+torch==2.4.1
 
 # Wissenschaftliche Bibliotheken (Minimal-Set)
 numpy==1.24.3
