@@ -80,21 +80,8 @@ View live website here: [Happy Hacks]().
 <hr>
 
 ### **Media**
-- [Balsamiq](https://balsamiq.com/) was used for the design of wireframes.
-- [Fontawesome](https://fontawesome.com/) was used for the icons on various buttons.
-- [DrawSQL](https://drawsql.app/) was used to sketch out the database models at an early stage.
+- [Heroku PostSQL](/) was used to sketch out the database models at an early stage.
 - [Pexels](https://unsplash.com/) was used to source the background image.
-
-<hr>
-
-### **Wireframes**
-Wireframes for different views are linked here:
-
-![Mobile Wireframe](/static/docs/mob-wireframe.jpg)
-![Mobile Wireframe](/static/docs/mob-wireframe-2.jpg)
-
-![Desktop Wireframe](/static/docs/desktop-wireframe.jpg)
-![Desktop Wireframe](/static/docs/desktop-wireframe-2.jpg)
 
 <hr>
 
@@ -102,95 +89,114 @@ Wireframes for different views are linked here:
 
 - The database scheme was completed an an early stage, but later ammended to include emoji's
 
-![Database Schema](/static/docs/dataschema1.jpg)
+![Database Schema]()
 
 <hr>
 
 ## **FEATURES**
 
+### **Navigation and Homepage**
+
+<hr>
+
+### **Homepage**
+- Hero Section: Large, visually appealing banner with a background image and a welcoming message (e.g., "Welcome to Amma's Kitchen").
+- Call to Action: Prominent "Reserve a Table" button leading to the reservation form.
+- Introduction Text: Brief description of Amma's Kitchen, highlighting the fusion of European and Asian cuisine.
+- Operating Hours: Clear display of opening hours (e.g., "Open daily from 11:00 AM to 10:00 PM").
+- Who We Are Section: Additional section introducing the restaurant's philosophy, cuisine, and unique offerings.
+- Image Gallery/Slider (Optional): Showcase of signature dishes and the restaurant's ambiance.
+- User-Friendly Navigation: Clear links to important sections like menu, reservations, and contact.
+- Mobile-Friendly Design: Responsive layout that adjusts seamlessly to different screen sizes.
+- Footer: Contains contact information, social media links, and legal information (e.g., terms, privacy policy).
+
+![Add Homepage](/)
+
+<hr>
+
 ### **Navigation**
+- Logo Placement: Positioned on the left side (or right, based on design preference) to represent Amma's Kitchen branding.
+- Responsive Design: Adapts to different screen sizes (desktop, tablet, mobile) with a collapsible hamburger menu for smaller screens.
+Menu Items:
+- Home: Links to the homepage.
+  - Book a Table: Directs users to the reservation form.
+  - My Reservations: Allows logged-in users to view and manage their reservations.
+  - Login/Logout: Displayed based on user's authentication status (Login if not authenticated, Logout if logged in).
+  - Authentication-Dependent Items: Certain menu items (e.g., "My Reservations" or "Logout") are only visible when the user is logged in.
+  - Styled with Bootstrap: Uses Bootstrap classes for responsive layout and consistent design.
+- Mobile Menu Toggler: A hamburger icon appears on mobile devices to toggle the menu.
+- Hover and Active Effects: Menu items highlight when hovered or clicked, making navigation more user-friendly.
 
-#### **Desktop Navigation**
-- The navigation bar is located at the top of each page on the site.
-- The menu contains links for the 'Home Page' (which is also linked via the Brand Logo), the 'Add Hack', 'Hacks', 'Team' page links, along with 'Login' and 'Register' links. 
-- Once the user is logged in the menu the 'Register' link is replaced with the 'Logout' page link.
-- The navbar is fully responsive and collapses into a burger menu for mobile devices.
-
-![Desktop Nav](/static/docs/navbar.jpg)
-
-#### **Mobile Navigation**
-- Presented as a burger menu for design responsiveness.
-- Once clicked a dropdown menu appears including all the page links as above.
-
-![Mobile Nav](/static/docs/nav-mob.jpg)
-
-![Mobile Nav Expanded](/static/docs/nav-mob-expanded.jpg)
+![Hacks Page](/)
 
 <hr>
 
 ### **Footer**
-- Located at the bottom of the page the footer loads text with todays date and a random happy thought.
+- Located at the bottom of the page the footer loads text with copyright information.
 
-![Footer](/static/docs/footer.jpg)
-
-<hr>
-
-### **Home Page**
-- Upon landing on the homepage the user is presented with the title 'Happy Hacks Generator'.
-- Below the title, a message instructs the user to press the button to 'generate happiness'.
-- When the button is pressed, a random post (hack) is displayed to the user.
-- A button at the left, illustrated with a music note, will play a happy song.
-- A button at the right, illustrated with a '+' sign, will take the user to the 'Add Hack' page.
-
-![Home Page](/static/docs/home.jpg)
-
-![Home Page Hack](/static/docs/home-hack.jpg)
+![Footer](/)
 
 <hr>
 
-### **Add Hack Page**
-- The Add Event page is essentially a form to complete.
-- If the user is not logged in, they will be redirected to login.
-- The user can type their 'happy hack' and pick an emoji to illustrate the hack.
-- A sound will be played when the user successfully submits a post, along with a happy animation.
+### **Book a table**
+- Table Selection: Choose from available tables based on seating capacity and availability.
+- Guest Number Input: Field to specify the number of guests, with automatic filtering of tables based on capacity.
+- Date and Time Picker: Allows users to select the date and time for their reservation.
+- Prevention of Double Booking: System checks to prevent multiple bookings for the same table at the same time.
+- Real-Time Availability Check: Ensures that only available tables are shown based on the selected date and time.
+- User Authentication: Requires login to complete the booking, ensuring reservations are tied to a user account.
+- Confirmation Message: After submitting, users receive confirmation of their booking, with details of the reservation.
+- Cancellation Option: Option for users to cancel or modify their booking from their account.
+- Google Calendar Integration: Option to sync booking with the user's calendar for reminders.
+- Responsive Design: The booking form is optimized for both desktop and mobile use.
 
-![Add Event](/static/docs/add-hack.jpg)
-
-![Add Emoji](/static/docs/add-emoji.jpg)
-
-<hr>
-
-### **Hacks Page**
-- The Hacks page displays all the hacks in the order they were last created.
-- User can type in the search box or select an emoji to filter posts so they can find suggestions that interest them.
-
-![Hacks Page](/static/docs/hacks.jpg)
+![book a table](/)
 
 <hr>
 
-### **Team Page**
-- The team page displays cards for each member.
-- Team member main roles in the project are provided.
-- Each member has a space to record their own 'Happy Hack'.
-- Links are provided for team members' Github and LinkedIn profiles.
+### **My reservation**
+- Reservation List: Displays all past and upcoming reservations made by the user.
+- Reservation Details: Shows date, time, number of guests, table information, and booking status.
+- Cancel Reservation: Provides a "Cancel" button to easily cancel upcoming reservations.
+- Modify Booking Option (Optional): Allows users to modify their existing reservations (e.g., change time, guest count).
+- Booking History: Shows past reservations, possibly marked as "completed" or "expired."
+- Real-Time Updates: Reflects changes made to reservations instantly (e.g., cancellations).
+- Responsive Design: Optimized for both desktop and mobile viewing, ensuring easy access to reservations on any device.
+- Call to Action for New Booking: Includes a "New Reservation" button to encourage users to book another table.
+- User Authentication: Requires the user to be logged in to view and manage their reservations.
+- Friendly Notifications: Provides feedback (e.g., "Reservation successfully canceled") after actions like cancellation or modification.
 
-![Team Page](/static/docs/team.jpg)
-
-<hr>
-
-### **CRUD Functionality**
-- The edit and delete hack page can be accessed via the Hacks page.
-- Hacks which the logged in user has created show a button which reveals an 'edit' or 'delete' link.
-
-![CRUD Links](/static/docs/crud.jpg)
+![my reservation](/)
 
 <hr>
 
-### **Love Hacks**
-- Logged in users can 'love' a hack by pressing the heart symbol displayed on the hack.
-- A number displays the number of 'loves' for each hack.
+### **Login Page**
 
-<hr>
+- Username and Password Fields: Simple form with fields for username and password.
+- CSRF Token: Ensures security with CSRF protection for form submissions.
+- Login Button: Clear, prominently placed "Login" button to submit credentials.
+- Error Handling: Displays friendly error messages for incorrect username/password combinations.
+- Password Reset Link (Optional): Provides a link to reset the password in case of forgotten credentials.
+- Redirect After Login: Automatically redirects users to the home page or a specific page after successful login.
+- Register Link: Includes a link to the registration page for new users ("Don't have an account? Register here").
+- Responsive Design: Optimized for both desktop and mobile, ensuring easy login on all devices.
+
+![Login](/)
+---
+
+### **Register Page**
+
+- User Registration Form: Includes fields for username, email, password, and password confirmation.
+- CSRF Token:** Protects against CSRF attacks during registration.
+- Register Button: A clearly visible "Register" button for submitting the form.
+- Password Validation:Ensures password meets security criteria (e.g., minimum length, special characters).
+- Error Messages: Shows specific error messages for invalid input (e.g., password mismatch, username already taken).
+- Login Link: Provides a link to the login page for users who already have an account ("Already have an account? Login here").
+- Success Confirmation: After successful registration, redirects the user to a confirmation page or logs them in automatically.
+- Responsive Design: Designed for both desktop and mobile screens, ensuring a smooth registration experience on any device.
+
+![Login](/)
+
 
 ## **TESTING**
 
@@ -204,7 +210,7 @@ Wireframes for different views are linked here:
 
 * Issue - Error when signing up
 * Cause - Caused by entering email address
-* Resolution - Email address not required, so removed.
+
 
 <hr>
 
@@ -214,16 +220,12 @@ Wireframes for different views are linked here:
 * CSS
 * Bootstrap
 * Javascript
-* EmojiMart
+
 
 <hr>
 
 ## **Credits**
 
 - The background image was sourced from [Daniel Space on Pexels](https://www.pexels.com/photo/shallow-focus-photography-of-yellow-flowers-1028542/)
+- 
 
-## **The Team**
-
-- The team worked incredibly well and managed to overcome the different time demands, supported junior member with conflict issues and got stuck into the code.
-- All members were encouraged to get involved in some way and gain experience in Hackathons and agile practices.
-- Regular meetings were held on slack, often to assist others in overcoming problems.
