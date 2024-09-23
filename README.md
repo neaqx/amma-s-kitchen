@@ -150,7 +150,7 @@ Menu Items:
 - Google Calendar Integration: Option to sync booking with the user's calendar for reminders.
 - Responsive Design: The booking form is optimized for both desktop and mobile use.
 
-![book a table](/)
+![book a table](/restaurant_booking/reservations/static/docs/booking-a-table.png)
 
 <hr>
 
