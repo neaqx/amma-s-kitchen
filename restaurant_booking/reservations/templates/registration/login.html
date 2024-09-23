@@ -1,6 +1,16 @@
 {% include 'header.html' %}
 <div class="container mt-5">
     <h2>Login</h2>
+    
+   
+    {% if messages %}
+        <div class="alert alert-danger">
+            {% for message in messages %}
+                <p>{{ message }}</p>
+            {% endfor %}
+        </div>
+    {% endif %}
+    
     <form method="POST">
         {% csrf_token %}
         <div class="form-group">

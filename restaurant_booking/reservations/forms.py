@@ -6,7 +6,9 @@ class ReservationForm(forms.ModelForm):
         model = Reservation
         fields = ['guests', 'table', 'date', 'time']
         widgets = {
-            'date': forms.DateInput(attrs={'type': 'date'}),
-            'time': forms.TimeInput(attrs={'type': 'time'}),
+            'guests': forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Number of Guests'}),
+            'table': forms.Select(attrs={'class': 'form-control'}),
+            'date': forms.DateInput(attrs={'type': 'date', 'class': 'form-control'}),
+            'time': forms.TimeInput(attrs={'type': 'time', 'class': 'form-control'}),
         }
 

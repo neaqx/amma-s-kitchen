@@ -3,10 +3,10 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-  
+
 }
+
 .hero-section {
-    
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -31,11 +31,64 @@ body {
     margin: 0 0 10px;
 }
 
-.btn-lg {
-    padding: 10px 30px;
-    font-size: 1.2em;
+
+.btn:hover {
+    background-color: #e88a2d;
+    border-color: #e88a2d;
+   
 }
 
-.conatiner {
+.empty-div {
+    height: 10vh;
+    
+}
+
+.slider {
+    position: relative;
+    width: 80%;
     height: 100vh;
+    overflow: hidden;
+    margin: 50px auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+   
+
+}
+
+.slides {
+    display: flex;
+    transition: all 0.5s ease-in-out;
+}
+
+.slide {
+    display: none;
+
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   
+}
+
+.navbar {
+    background-color: black;
+}
+
+.nav-link{
+    color: white;
+}
+
+.nav-link:hover {
+    color: #fa9f42;
+}
+
+.navbar-brand {
+    color: white;
 }

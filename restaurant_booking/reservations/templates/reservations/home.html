@@ -5,27 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amma's Kitchen</title>
- 
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">  
+    
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
 {% include 'header.html' %}
+
+<!-- Hero Section -->
 <div class="hero-section" style="background-image: url('{% static 'images/valentin-kremer-S8BhJ0HB-WQ-unsplash.jpg' %}');">
     <div class="hero-content text-center">
         <h1 class="display-4 text-white">Welcome to Amma's Kitchen</h1>
         <p class="lead text-white">Experience the fusion of European and Asian cuisine.</p>
-        <a href="{% url 'make_reservation' %}" class="btn btn-success btn-lg">Reserve a Table</a>
+        <a href="{% url 'make_reservation' %}" class="btn btn-dark btn-lg">Reserve a table</a>
     </div>
 </div>
 
 <div class="container mt-5">
     <h2>Who we are</h2>
-    <p>Our restaurant welcomes you daily from 11:00 AM to 10:00 PM, offering a unique dining experience that transcends borders. With locations across the globe, from the vibrant streets of Berlin to the bustling heart of Tokyo, we proudly bring our authentic cuisine to food lovers everywhere. Don’t miss out—book your table today and indulge in flavors that unite the world on a single plate! </p>
-    <a href="{% url 'make_reservation' %}" class="btn btn-success btn-lg">Reserve a Table</a>
-    <div>
-    <div>
+    <p>Our restaurant welcomes you daily from 11:00 AM to 10:00 PM, offering a unique dining experience that transcends borders. With locations across the globe, from the vibrant streets of Berlin to the bustling heart of Tokyo, we proudly bring our authentic cuisine to food lovers everywhere. Don’t miss out—book your table today and indulge in flavors that unite the world on a single plate!</p>
+    <a href="{% url 'make_reservation' %}" class="btn btn-dark btn-lg">Reserve a table</a>
 </div>
 
+
+<div class="slider">
+    <div class="slides">
+       
+        <div class="slide"><img src="{% static 'images/poul-hoang-6IijCH0zRNM-unsplash.jpg' %}" alt="Image 1"></div>
+      
+        <div class="slide"><img src="{% static 'images/jason-leung-poI7DelFiVA-unsplash.jpg' %}" alt="Image 2"></div>
+        
+        <div class="slide"><img src="{% static 'images/giulia-squillace-s1UuTu68gwY-unsplash.jpg' %}" alt="Image 3"></div>
+        
+        <div class="slide"><img src="{% static 'images/valentin-kremer-S8BhJ0HB-WQ-unsplash.jpg' %}" alt="Image 4"></div>
+    </div>
+</div>
+
+<div class="empty-div"></div>
+
 {% include 'footer.html' %}
+
+<script src="{% static 'js/slider.js' %}"></script>
+
+</body>
+</html>
+
 
 
