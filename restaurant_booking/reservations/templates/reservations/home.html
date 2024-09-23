@@ -1,9 +1,19 @@
 {% include 'header.html' %}
-<div class="container mt-5">
-    <h1>Welcome to Amma's Kitchen</h1>
-    <p>Experience the fusion of European and Asian cuisine at our restaurant.</p>
-    <img src="/static/images/dish1.jpg" alt="Dish 1" class="img-fluid">
-    <p class="mt-3">Make a reservation now to secure your table.</p>
-    <a href="{% url 'make_reservation' %}" class="btn btn-success">Reserve a Table</a>
+
+<!-- Hero Section -->
+{% comment %} <div class="hero-section" style="background-image: url('{% static 'images/hero-background.jpg' %}');"> {% endcomment %}
+    <div class="hero-content text-center">
+        <h1 class="display-4 text-white">Welcome to Amma's Kitchen</h1>
+        <p class="lead text-white">Experience the fusion of European and Asian cuisine.</p>
+        <a href="{% url 'make_reservation' %}" class="btn btn-success btn-lg">Reserve a Table</a>
+    </div>
 </div>
+
+<div class="container mt-5">
+    <h2>Who we are</h2>
+    <p>Our restaurant is open from 11:00 AM to 10:00 PM every day. We have an international presence. From Berlin to Tokyo, we bring our cuisine to the whole world. Make a reservation now to secure your table </p>
+    <a href="{% url 'make_reservation' %}" class="btn btn-success btn-lg">Reserve a Table</a>
+</div>
+
 {% include 'footer.html' %}
+

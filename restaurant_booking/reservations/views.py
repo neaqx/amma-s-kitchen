@@ -4,6 +4,10 @@ from .forms import ReservationForm
 from django.contrib.auth.decorators import login_required
 from datetime import datetime
 
+
+def home(request):
+    return render(request, 'reservations/home.html')  # Stelle sicher, dass der Pfad korrekt ist
+
 @login_required
 def make_reservation(request):
     if request.method == "POST":
