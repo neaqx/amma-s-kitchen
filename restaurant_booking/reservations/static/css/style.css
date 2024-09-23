@@ -23,7 +23,7 @@ body {
     padding: 120px;
     border-radius: 10px;
     text-align: center;
-    /* Text zentrieren */
+    
 }
 
 .hero-content h1,
@@ -134,7 +134,7 @@ body {
 }
 
 
-/* Styling für das Registrierungsformular */
+
 .register-container {
     max-width: 400px;
     margin: 0 auto;
@@ -166,7 +166,7 @@ body {
 }
 
 
-/* Styling für das Reservierungsformular */
+
 .reservation-container {
     max-width: 600px;
     margin: 0 auto;

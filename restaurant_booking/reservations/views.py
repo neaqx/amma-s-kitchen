@@ -4,18 +4,30 @@ from .forms import ReservationForm, CustomUserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login
 from django.contrib import messages
+from django.utils import timezone  # Für den Vergleich mit dem aktuellen Datum
 
 # Startseite
 def home(request):
     return render(request, 'reservations/home.html')
 
-# View für das Erstellen einer Reservierung
+
 @login_required
 def make_reservation(request):
     if request.method == "POST":
         form = ReservationForm(request.POST)
         if form.is_valid():
             reservation = form.save(commit=False)
+            
+            if reservation.date == timezone.now().date():
+                messages.error(request, 'You cannot make a reservation for today. Please select a future date.')
+                return render(request, 'reservations/reservation_form.html', {'form': form})
+            
+           
+            if reservation.guests > reservation.table.seats:
+                messages.error(request, f'The selected table cannot accommodate {reservation.guests} guests. Please choose a larger table.')
+                return render(request, 'reservations/reservation_form.html', {'form': form})
+            
+       
             conflicting_reservations = Reservation.objects.filter(
                 table=reservation.table, date=reservation.date, time=reservation.time
             )
@@ -32,7 +44,7 @@ def make_reservation(request):
 
     return render(request, 'reservations/reservation_form.html', {'form': form})
 
-# View zur Anzeige der Reservierungen des Benutzers
+
 @login_required
 def my_reservations(request):
     reservations = Reservation.objects.filter(user=request.user)
@@ -64,6 +76,7 @@ def register(request):
         form = CustomUserCreationForm()
     
     return render(request, 'registration/register.html', {'form': form})
+
 
 
 
