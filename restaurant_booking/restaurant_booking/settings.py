@@ -31,7 +31,7 @@ DEBUG = False
 ALLOWED_HOSTS = [
 
     '127.0.0.1',
-    '.herokuapp.com',
+    'https://ammas-kitchen-3d49eddc3540.herokuapp.com/',
     'ddah.herokuapp.com',
 ]
 
