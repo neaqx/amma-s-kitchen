@@ -6,7 +6,6 @@ from pathlib import Path  # Ensure you import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = "django-insecure-=dji^4@%kj@t_nn^j$ky%$)vs4iecjlfx=xcr(+wh-dk7ex)r="
@@ -42,7 +41,8 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',  # This should be placed early in the middleware
 ]
 
-ROOT_URLCONF = "restaurant_booking.urls"
+# Note the directory change from 'amma' to 'ammas-kitchen'
+ROOT_URLCONF = "ammas-kitchen.urls"
 
 TEMPLATES = [
     {
@@ -60,7 +60,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "restaurant_booking.wsgi.application"
+# Note the updated WSGI application path
+WSGI_APPLICATION = "ammas-kitchen.wsgi.application"
 
 # Database
 DATABASES = {
@@ -113,3 +114,4 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Activate Django-Heroku
 django_heroku.settings(locals())
+

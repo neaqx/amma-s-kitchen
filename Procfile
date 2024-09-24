@@ -1,2 +1,2 @@
-web: gunicorn restaurant_booking.wsgi
+web: gunicorn ammas-kitchen.wsgi
 
