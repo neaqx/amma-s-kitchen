@@ -1,0 +1,214 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+
+}
+
+.hero-section {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 120px;
+    border-radius: 10px;
+    text-align: center;
+    
+}
+
+.hero-content h1,
+.hero-content p {
+    margin: 0 0 10px;
+}
+
+
+.btn:hover {
+    background-color: #e88a2d;
+    border-color: #e88a2d;
+   
+}
+
+.empty-div {
+    height: 10vh;
+    
+}
+
+.slider {
+    position: relative;
+    width: 80%;
+    height: 100vh;
+    overflow: hidden;
+    margin: 50px auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+   
+
+}
+
+.slides {
+    display: flex;
+    transition: all 0.5s ease-in-out;
+}
+
+.slide {
+    display: none;
+
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   
+}
+
+.navbar {
+    background-color: black;
+}
+
+.nav-link{
+    color: white;
+}
+
+.nav-link:hover {
+    color: #fa9f42;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.custom-toggler.navbar-toggler {
+    border-color: white;
+}
+
+
+/* Styling Login-Formular */
+.login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.alert {
+    margin-top: 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-center p {
+    margin-top: 20px;
+}
+
+
+
+.register-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.register-container h2 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-center p {
+    margin-top: 20px;
+}
+
+
+
+.reservation-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.reservation-container p {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
