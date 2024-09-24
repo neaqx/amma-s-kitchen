@@ -1,0 +1,8 @@
+{
+  "cleanup_paths": [
+    "node_modules",
+    "build",
+    "tmp",
+    "__pycache__"
+  ]
+}
