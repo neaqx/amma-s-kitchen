@@ -1,1 +1,1 @@
-web: gunicorn ammas-kitchen.wsgi --log-file -
+web:gunicorn ammas-kitchen.wsgi --log-file -
