@@ -1,7 +1,7 @@
 import os 
 import django_heroku
 import dj_database_url
-from pathlib import Path  # Ensure you import Path
+from pathlib import Path  
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -11,7 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-=dji^4@%kj@t_nn^j$ky%$)vs4iecjlfx=xcr(+wh-dk7ex)r="
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     '*'
@@ -36,10 +36,10 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    'whitenoise.middleware.WhiteNoiseMiddleware',  # This should be placed early in the middleware
+    'whitenoise.middleware.WhiteNoiseMiddleware',  
 ]
 
-# Note the directory change from 'amma' to 'ammas-kitchen'
+
 ROOT_URLCONF = "ammas-kitchen.urls"
 
 TEMPLATES = [
