@@ -110,6 +110,4 @@ LOGOUT_REDIRECT_URL = '/accounts/login/'
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-# Activate Django-Heroku
-django_heroku.settings(locals())
 
