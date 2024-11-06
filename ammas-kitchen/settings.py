@@ -14,7 +14,8 @@ SECRET_KEY = "django-insecure-=dji^4@%kj@t_nn^j$ky%$)vs4iecjlfx=xcr(+wh-dk7ex)r=
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'ammas-kitchen-3d49eddc3540.herokuapp.com'
+    'ammas-kitchen-3d49eddc3540.herokuapp.com',
+    'localhost',
 ]
 
 # Application definition

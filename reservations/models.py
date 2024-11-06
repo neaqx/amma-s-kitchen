@@ -12,7 +12,7 @@ class Table(models.Model):
 class Reservation(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     table = models.ForeignKey(Table, on_delete=models.CASCADE)
-    guests = models.IntegerField(max_length=10)
+    guests = models.IntegerField()
     date = models.DateField()
     time = models.TimeField()
     created_at = models.DateTimeField(auto_now_add=True)

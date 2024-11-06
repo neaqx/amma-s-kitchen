@@ -50,7 +50,7 @@ def my_reservations(request):
     reservations = Reservation.objects.filter(user=request.user)
     return render(request, 'reservations/my_reservations.html', {'reservations': reservations})
 
-# View zum Stornieren einer Reservierung
+
 @login_required
 def cancel_reservation(request, pk):
     reservation = get_object_or_404(Reservation, pk=pk)
@@ -63,7 +63,7 @@ def cancel_reservation(request, pk):
 
     return redirect('my_reservations')
 
-# View zur Benutzerregistrierung
+
 def register(request):
     if request.method == 'POST':
         form = CustomUserCreationForm(request.POST)
