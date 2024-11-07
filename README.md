@@ -4,7 +4,12 @@
 
 Welcome yourself to  *Ammas Kitchen*, also know as **Best restaurant in the world** - a rejoiceful place where you can find the best of both worlds, all on one plate.
 
-![Am I Responsive]()
+![Am I Responsive](reservations/static/docs/mobile.png)
+![Am I Responsive](reservations/static/docs/home.png)
+
+![Am I Responsive](reservations/static/docs/amiresponsive.png)
+
+Am I Responsive* did not work, but my project is responsive. I haven't found a solution yet.
 
 Amma's Kitchen is a unique fusion restaurant that brings together the rich flavors of European and Asian cuisine. At Amma's Kitchen, we believe in blending culinary traditions to create a dining experience that is both familiar and adventurous. Our chefs meticulously craft each dish, drawing inspiration from diverse cultures and adding a modern twist to time-honored recipes.
 
@@ -63,7 +68,7 @@ View live website here: [ammas kitchen](https://ammas-kitchen-3d49eddc3540.herok
 - We selcted a serious and professional colour palette to reflect the serious nature of the project.
 - Colours were selected using the coolors color palette generator.
 
-![Coolors Palette](/)
+![Coolors Palette](reservations/static/docs/coolors1.png)
 
 <hr>
 
@@ -224,6 +229,6 @@ Menu Items:
 
 ## **Credits**
 
-- The background image was sourced from [Daniel Space on Pexels](https://www.pexels.com/photo/shallow-focus-photography-of-yellow-flowers-1028542/)
-- 
+- Programming with Mosh (https://www.youtube.com/@programmingwithmosh)
+
 
