@@ -149,8 +149,6 @@ Menu Items:
 - Table Selection: Choose from available tables based on seating capacity and availability.
 - Guest Number Input: Field to specify the number of guests, with automatic filtering of tables based on capacity.
 - Date and Time Picker: Allows users to select the date and time for their reservation.
-- Prevention of Double Booking: System checks to prevent multiple bookings for the same table at the same time.
-- Real-Time Availability Check: Ensures that only available tables are shown based on the selected date and time.
 - User Authentication: Requires login to complete the booking, ensuring reservations are tied to a user account.
 - Confirmation Message: After submitting, users receive confirmation of their booking, with details of the reservation.
 - Responsive Design: The booking form is optimized for both desktop and mobile use.
@@ -163,8 +161,6 @@ Menu Items:
 - Reservation List: Displays all past and upcoming reservations made by the user.
 - Reservation Details: Shows date, time, number of guests, table information, and booking status.
 - Cancel Reservation: Provides a "Cancel" button to easily cancel upcoming reservations.
-- Modify Booking Option (Optional): Allows users to modify their existing reservations (e.g., change time, guest count).
-- Booking History: Shows past reservations, possibly marked as "completed" or "expired."
 - Real-Time Updates: Reflects changes made to reservations instantly (e.g., cancellations).
 - Responsive Design: Optimized for both desktop and mobile viewing, ensuring easy access to reservations on any device.
 - Call to Action for New Booking: Includes a "New Reservation" button to encourage users to book another table.
