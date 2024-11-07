@@ -30,9 +30,6 @@ All HTML code has been run through the [W3C - HTML](https://validator.w3.org/) v
 #### **header.html**
 ![HTML Base Page](reservations/static/docs/validation-navbar.png)
 
-#### **footer.html**
-![HTML Base Page]()
-
 
 <hr>
 
@@ -52,7 +49,7 @@ All Python code has been run through the [CI PEP8 Testing](https://pep8ci.heroku
 #### **model.py**
 ![admin-py](reservations/static/docs/validation-modelpy.png)
 
-#### *views.py**
+#### **views.py**
 ![app-py](reservations/static/docs/validation-viewspy.png)
 
 #### **forms.py**
