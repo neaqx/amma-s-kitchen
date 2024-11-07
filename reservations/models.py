@@ -11,7 +11,7 @@ class Table(models.Model):
 
 class Reservation(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    table = models.ForeignKey(Table, on_delete=models.CASCADE)
+    table = models.ForeignKey(Table, on_delete=models.CASCADE, default=1)
     guests = models.IntegerField()
     date = models.DateField()
     time = models.TimeField()

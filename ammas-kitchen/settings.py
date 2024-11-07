@@ -16,6 +16,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'ammas-kitchen-3d49eddc3540.herokuapp.com',
     'localhost',
+    '127.0.0.1',
 ]
 
 # Application definition
