@@ -20,7 +20,7 @@ def make_reservation(request):
         if form.is_valid():
             reservation = form.save(commit=False)
 
-            # Check if reservation date is today or a future date
+            
             if reservation.date <= timezone.now().date():
                 messages.error(
                     request,
@@ -31,7 +31,7 @@ def make_reservation(request):
                     {'form': form}
                 )
 
-            # Check if the number of guests fits the table capacity
+         
             if reservation.guests > reservation.table.seats:
                 messages.error(
                     request,
@@ -43,13 +43,13 @@ def make_reservation(request):
                     {'form': form}
                 )
 
-            # Define a buffer time to avoid overlap (e.g., 2 hours)
+        
             reservation_duration = timedelta(hours=2)
             start_time = reservation.time
             end_time = (datetime.combine(date.min, start_time) +
                         reservation_duration).time()
 
-            # Check for overlapping reservations on the same table
+        
             conflicting_reservations = Reservation.objects.filter(
                 table=reservation.table,
                 date=reservation.date,
@@ -67,7 +67,6 @@ def make_reservation(request):
                     {'form': form}
                 )
 
-            # Save the reservation with the current user as the owner
             reservation.user = request.user
             reservation.save()
             messages.success(request, 'Reservation successfully created!')
