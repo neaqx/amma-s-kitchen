@@ -80,7 +80,9 @@ View live website here: [ammas kitchen](https://ammas-kitchen-3d49eddc3540.herok
 <hr>
 
 ### **Wireframe**
-- [wireframe](reservations/static/docs/wireframe.png)
+![wireframe](reservations/static/docs/wireframe.png)
+![wireframe](reservations/static/docs/wireframe2.png)
+![wireframe](reservations/static/docs/wireframe3.png)
 
 
 ### **Media**
