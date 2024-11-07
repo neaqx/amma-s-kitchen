@@ -4,7 +4,8 @@ from .forms import ReservationForm, CustomUserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login
 from django.contrib import messages
-from django.utils import timezone  # For comparing with the current date
+from django.utils import timezone
+from datetime import timedelta
 
 
 # Home page
@@ -19,17 +20,18 @@ def make_reservation(request):
         if form.is_valid():
             reservation = form.save(commit=False)
 
-            if reservation.date == timezone.now().date():
+            # Check if reservation date is today or a future date
+            if reservation.date <= timezone.now().date():
                 messages.error(
                     request,
-                    'You cannot make a reservation for today.'
-                    'Select a future date.'
+                    'Reservations must be made for a future date.'
                 )
                 return render(
                     request, 'reservations/reservation_form.html',
                     {'form': form}
                 )
 
+            # Check if the number of guests fits the table capacity
             if reservation.guests > reservation.table.seats:
                 messages.error(
                     request,
@@ -41,21 +43,31 @@ def make_reservation(request):
                     {'form': form}
                 )
 
+            # Define a buffer time to avoid overlap (e.g., 2 hours)
+            reservation_duration = timedelta(hours=2)
+            start_time = reservation.time
+            end_time = (datetime.combine(date.min, start_time) +
+                        reservation_duration).time()
+
+            # Check for overlapping reservations on the same table
             conflicting_reservations = Reservation.objects.filter(
                 table=reservation.table,
                 date=reservation.date,
-                time=reservation.time
+                time__gte=start_time,
+                time__lt=end_time
             )
             if conflicting_reservations.exists():
                 messages.error(
                     request,
-                    'Double booking! Choose another time or table.'
+                    'The selected table is already reserved for this time. '
+                    'Please choose a different time or table.'
                 )
                 return render(
                     request, 'reservations/reservation_form.html',
                     {'form': form}
                 )
 
+            # Save the reservation with the current user as the owner
             reservation.user = request.user
             reservation.save()
             messages.success(request, 'Reservation successfully created!')
