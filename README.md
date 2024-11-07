@@ -179,7 +179,7 @@ Menu Items:
 - Register Link: Includes a link to the registration page for new users ("Don't have an account? Register here").
 - Responsive Design: Optimized for both desktop and mobile, ensuring easy login on all devices.
 
-![Login](reservations/static/docs/book-a-table.png)
+![Login](reservations/static/docs/login.png)
 ---
 
 ### **Register Page**
