@@ -12,8 +12,8 @@
 
 All HTML code has been run through the [W3C - HTML](https://validator.w3.org/) validator.  The only errors appear to be confusion over the use of Django.
 
-#### **Index.html**
-![HTML Team Page](/static/docs/w3c_about_team.jpg)
+#### **Home.html**
+![HTML Team Page](reservations/static/docs/validation-home.png)
 
 #### **Events.html**
 ![HTML Base Page](/static/docs/w3c_base_html.jpg)
