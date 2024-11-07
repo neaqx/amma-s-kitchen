@@ -109,9 +109,8 @@ View live website here: [ammas kitchen](https://ammas-kitchen-3d49eddc3540.herok
 - Mobile-Friendly Design: Responsive layout that adjusts seamlessly to different screen sizes.
 - Footer: Contains contact information, social media links, and legal information (e.g., terms, privacy policy).
 
-![Add Homepage](/restaurant_booking/reservations/static/docs/home.png)
-![Add Homepage](/restaurant_booking/reservations/static/docs/home2.png)
-![Add Homepage](/restaurant_booking/reservations/static/docs/home3.png)
+![Add Homepage](reservations/static/docs/home.png)
+![Add Homepage](reservations/static/docs/home2.png)
 
 
 <hr>
