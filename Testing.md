@@ -44,9 +44,9 @@ All CSS code has been run through the [W3C - CSS](https://jigsaw.w3.org/css-vali
 
 ## **JS Validation**
 
-All CSS code has been run through the [W3C - CSS](https://jigsaw.w3.org/css-validator/) validator.  There was a minor error with text-wrap in style.css, although it does function as intended.
+All CSS code has been run through the [JSHINT](https://jshint.com/) validator.  
 
-![CSS Validator Style.css](reservations/static/docs/validation-css.png)
+![JSHINT code](reservations/static/docs/jshint-validation.png)
 
 
 <hr>
@@ -72,17 +72,17 @@ Device testing was conducted on a variety of phone models, including Samsung Gal
 
 #### Problem with deployment on heroku.
 
-* When I have deployed the site to Heroku for the first time, my custom CSS was not working, it was due to Cloudinary not providing my static files, I had to change my DEBUG = True to DEBUG = development, development = os.environ.get('DEVELOPMENT'), which is connected to my Gitpod variable DEVELOPMENT  which is set to True, meaning deployed site is set to False and production is set to True, I had to delete my static files from Cloudinary and force a manual deploy again and it picked up the files and everything works since then.
-
-#### Flatpick not reloading
-
- * Page is reloaded by ensuring the bookedDates array is correctly populated with booked dates before initializing the flatpickr date picker. This is achieved by checking if the booked_dates_json variable is truthy, parsing it as JSON, and using the resulting array for flatpickr's disable option. The DOMContentLoaded event listener guarantees proper timing for the flatpickr initialization.
+* For a long time, deploying my project to Heroku was impossible due to an issue. With the help of a Code Institute tutor, I was able to solve it. The problem turned out to be an incorrect setting in the settings.py file, specifically in the ALLOWED_HOSTS configuration.
 
 ### Unresolved Bug
 
-#### Flatpick activates after booking is made on some phone devices
+#### Mobil navbar-icon not changed the color
 
 * It's possible that the bug is related to the mobile environment or specific device configurations
+
+#### Double booking is still possible, even though I implemented code to prevent it.
+
+* Bookings can sometimes be duplicated, even though this shouldn't be possible. Despite implementing measures to prevent double bookings, the system occasionally allows them to go through. This issue needs further investigation to ensure that all bookings are correctly handled without overlap
 
 
 
@@ -108,12 +108,6 @@ Device testing was conducted on a variety of phone models, including Samsung Gal
 |               | Click on My Booking in dropdown | Redirect to Booking Overview page | PASS |
 |               | Click on Make a Booking in dropdown | Redirect to browse cabins | PASS |
 |               | Click on Logout | Redirect to Logout Page | PASS |
-| Home Page (Logged In - Admin)    |               |                  |                  |
-|               | Click on admin name | Open dropdown menu | PASS |
-|               | Click on My Booking in dropdown | Redirect to Booking Overview page | PASS |
-|               | Click on Admin Panel | Redirect to Django Admin Panel | PASS |
-| Contact Page     |               |                  |                  |
-|               | Click on social links | Open new tab with appropriate link | PASS |
 | Sign Up Page  |                  |                  |                  |
 |               | Enter invalid email | Field will only accept email address format | PASS |
 |               | Enter valid email | No error | PASS |
@@ -132,10 +126,6 @@ Device testing was conducted on a variety of phone models, including Samsung Gal
 |               | Click Sign In with empty form | Fill in the form fields | PASS |
 | Logout Page  |                  |                  |                  |
 |               | Click on Sign Out button | Sign user out, message that user signed out | PASS |
-| Browse Cabins Page  |                  |                  |                  |
-|               | Click on Book Now on any Cabin | Redirects to selected cabin booking form | PASS |
-|               | Click on Next button | Moves to another page, displays different cabins | PASS |
-|               | Click on Previous button | Goes back to previous page | PASS |
 | Make a Booking Page  |                  |                  |                  |
 |               | Click on Book Now button while form is empty | Fill in the form fields, alert message | PASS |
 |               | Try to select dates in the past | They are disabled | PASS |
@@ -152,11 +142,6 @@ Device testing was conducted on a variety of phone models, including Samsung Gal
 |               | Try to make check out date be before check in date | Check out can't be before check in, alert message | PASS |
 |               | Enter valid form data | Booking Succesful, alert message and a total price is calculated based on the booking | PASS |
 |               | User fills in only check in, check out and num of guests | Booking Succesful, amenities are optional | PASS |
-| Booking Succesful Page |  |    |    |
-|               | Read the booking details | Details are as expected, match users booking | PASS |
-|               | Total price check | Total price is calculated correctly | PASS |
-|               | Click on Contact Us button | Redirect to Contact page | PASS |
-|               | Click on My Booking button | Redirects to Booking Overview page | PASS |
 | Booking Overview Page |  |    |    |
 |               | Read the bookings | Results match users bookings and details of bookings | PASS |
 |               | Click on Edit button | Redirect to Edit Booking page | PASS |
@@ -181,13 +166,6 @@ Device testing was conducted on a variety of phone models, including Samsung Gal
 |               | Read the booking ID number | It displays correct Id number of chosen cabin user wants to delete | PASS |
 |               | Click on Confirm Delete button | Booking is deleted, alert message | PASS |
 |               | Click on Cancel button | Redirect back to Booking Overview page | PASS |
-| 404 Error Page |  |    |    |
-|               | Type in URL that does not exists | Custom 404 Error page is displayed | PASS |
-|               | Click on Take Me Home button | Redirect to Home page | PASS |
-| 500 Error Page |  |    |    |
-|               | Admin raise exception in views.py | Custom 500 Error page is displayed, local development testing | PASS |
-|               | Click on Go to Homepage button | Redirect to Home page | PASS |
 | Admin Panel |  |    |    |
 |               | CRUD functionality | Working as expected | PASS |
 
-Return to [README](README.md)
