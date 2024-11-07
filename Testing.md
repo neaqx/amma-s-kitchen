@@ -40,9 +40,8 @@ All HTML code has been run through the [W3C - HTML](https://validator.w3.org/) v
 
 All CSS code has been run through the [W3C - CSS](https://jigsaw.w3.org/css-validator/) validator.  There was a minor error with text-wrap in style.css, although it does function as intended.
 
-![CSS Validator Style.css](/static/docs/w3c_css_style_css.jpg)
+![CSS Validator Style.css](reservations/static/docs/validation-css.png)
 
-![CSS Validator Style.css](/static/docs/w3c_css_random_post_css.jpg)
 
 <hr>
 
@@ -50,14 +49,14 @@ All CSS code has been run through the [W3C - CSS](https://jigsaw.w3.org/css-vali
 
 All Python code has been run through the [CI PEP8 Testing](https://pep8ci.herokuapp.com/) validator and has returned no errors, results can be viewed below:
 
-#### **admin.py**
-![admin-py](/static/docs/python_testing_admin_py.jpg)
+#### **model.py**
+![admin-py](reservations/static/docs/validation-modelpy.png)
 
-#### **apps.py**
-![app-py](/static/docs/python_testing_apps_py.jpg)
+#### *views.py**
+![app-py](reservations/static/docs/validation-viewspy.png)
 
 #### **forms.py**
-![forms-py](/static/docs/python_testing_forms_py.jpg)
+![forms-py](reservations/static/docs/validation-formspy.png)
 
 
 
