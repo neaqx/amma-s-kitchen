@@ -102,7 +102,6 @@ View live website here: [ammas kitchen](https://ammas-kitchen-3d49eddc3540.herok
 - Hero Section: Large, visually appealing banner with a background image and a welcoming message (e.g., "Welcome to Amma's Kitchen").
 - Call to Action: Prominent "Reserve a Table" button leading to the reservation form.
 - Introduction Text: Brief description of Amma's Kitchen, highlighting the fusion of European and Asian cuisine.
-- Operating Hours: Clear display of opening hours (e.g., "Open daily from 11:00 AM to 10:00 PM").
 - Who We Are Section: Additional section introducing the restaurant's philosophy, cuisine, and unique offerings.
 - Image Gallery/Slider (Optional): Showcase of signature dishes and the restaurant's ambiance.
 - User-Friendly Navigation: Clear links to important sections like menu, reservations, and contact.
@@ -128,14 +127,14 @@ Menu Items:
 - Mobile Menu Toggler: A hamburger icon appears on mobile devices to toggle the menu.
 - Hover and Active Effects: Menu items highlight when hovered or clicked, making navigation more user-friendly.
 
-![Hacks Page](/restaurant_booking/reservations/static/docs/navbar.png)
+![Navabr](reservations/static/docs/navabr.png)
 
 <hr>
 
 ### **Footer**
 - Located at the bottom of the page the footer loads text with copyright information.
 
-![Footer](/restaurant_booking/reservations/static/docs/footer.png)
+![Footer](reservations/static/docs/footer.png)
 
 <hr>
 
@@ -147,11 +146,9 @@ Menu Items:
 - Real-Time Availability Check: Ensures that only available tables are shown based on the selected date and time.
 - User Authentication: Requires login to complete the booking, ensuring reservations are tied to a user account.
 - Confirmation Message: After submitting, users receive confirmation of their booking, with details of the reservation.
-- Cancellation Option: Option for users to cancel or modify their booking from their account.
-- Google Calendar Integration: Option to sync booking with the user's calendar for reminders.
 - Responsive Design: The booking form is optimized for both desktop and mobile use.
 
-![book a table](/restaurant_booking/reservations/static/docs/booking-a-table.png)
+![book a table](reservations/static/docs/book-a-table.png)
 
 <hr>
 
@@ -167,7 +164,7 @@ Menu Items:
 - User Authentication: Requires the user to be logged in to view and manage their reservations.
 - Friendly Notifications: Provides feedback (e.g., "Reservation successfully canceled") after actions like cancellation or modification.
 
-![my reservation](/restaurant_booking/reservations/static/docs/my_reservations.png)
+![my reservation](reservations/static/docs/booking-table.png)
 
 <hr>
 
@@ -182,7 +179,7 @@ Menu Items:
 - Register Link: Includes a link to the registration page for new users ("Don't have an account? Register here").
 - Responsive Design: Optimized for both desktop and mobile, ensuring easy login on all devices.
 
-![Login](/restaurant_booking/reservations/static/docs/login.png)
+![Login](reservations/static/docs/book-a-table.png)
 ---
 
 ### **Register Page**
@@ -196,7 +193,7 @@ Menu Items:
 - Success Confirmation: After successful registration, redirects the user to a confirmation page or logs them in automatically.
 - Responsive Design: Designed for both desktop and mobile screens, ensuring a smooth registration experience on any device.
 
-![register](/restaurant_booking/reservations/static/docs/register.png)
+![register](reservations/static/docs/register.png)
 
 
 ## **TESTING**
