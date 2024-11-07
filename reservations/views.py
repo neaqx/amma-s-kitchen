@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login
 from django.contrib import messages
 from django.utils import timezone
-from datetime import timedelta
+from datetime import date, datetime, timedelta
 
 
 # Home page
