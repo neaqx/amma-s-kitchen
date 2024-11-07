@@ -92,9 +92,8 @@ body {
 .navbar-brand {
     color: white;
 }
-
-.custom-toggler.navbar-toggler {
-    border-color: white;
+.navbar-toggler {
+    border-color: lightgreen;
 }
 
 

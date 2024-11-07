@@ -15,7 +15,7 @@ We are open daily from 11:00 AM to 10:00 PM, ready to serve you an unforgettable
 
 Make a reservation now and discover a new world of flavor at Amma's Kitchen!
 
-View live website here: [ammas kitchen]().
+View live website here: [ammas kitchen](https://ammas-kitchen-3d49eddc3540.herokuapp.com/).
 
 <hr>
 
@@ -80,7 +80,7 @@ View live website here: [ammas kitchen]().
 
 ### **Media**
 - [Heroku PostSQL](/) was used to sketch out the database models at an early stage.
-- [Pexels](https://unsplash.com/) was used to source the background image.
+- [Unsplash](https://unsplash.com/) was used to source the background image.
 
 <hr>
 
