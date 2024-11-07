@@ -78,9 +78,6 @@ View live website here: [ammas kitchen](https://ammas-kitchen-3d49eddc3540.herok
 - Roboto Slab and Quicksand were selected.
 - Later, Lilita One, was selected for the home page title for impact.
 
-![Fonts](/static/docs/fonts.png)
-![Title Font](/static/docs/lilitaonefont.jpg)
-
 <hr>
 
 ### **Media**
@@ -93,7 +90,7 @@ View live website here: [ammas kitchen](https://ammas-kitchen-3d49eddc3540.herok
 
 - The database scheme was completed an an early stage, but later ammended to include emoji's
 
-![Database Schema]()
+![Database Schema](reservations/static/docs/dataschema.png)
 
 <hr>
 
