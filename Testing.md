@@ -15,20 +15,20 @@ All HTML code has been run through the [W3C - HTML](https://validator.w3.org/) v
 #### **home.html**
 ![HTML Team Page](reservations/static/docs/validation-home.png)
 
-#### **my_reservations.html**
-![HTML Team Page](reservations/static/docs/validation-home.png)
+#### **reservations.html**
+![HTML Team Page](reservations/static/docs/validation-booking-form.png)
 
-#### **reservation_form.html**
-![HTML Team Page]()
+#### **ma_reservation_form.html**
+![HTML Team Page](reservations/static/docs/validation-my_reservations.png)
 
 #### **login.html**
-![HTML Base Page]()
+![HTML Base Page](reservations/static/docs/validation-register.png)
 
 #### **register.html**
-![HTML Base Page]()
+![HTML Base Page](reservations/static/docs/validation-new-account.png)
 
 #### **header.html**
-![HTML Base Page]()
+![HTML Base Page](reservations/static/docs/validation-navbar.png)
 
 #### **footer.html**
 ![HTML Base Page]()
