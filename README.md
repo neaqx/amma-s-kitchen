@@ -76,9 +76,12 @@ View live website here: [ammas kitchen](https://ammas-kitchen-3d49eddc3540.herok
 - All fonts were sourced through [Google fonts](https://fonts.google.com/).
 - Fonts were selected for their simple and readable design to avoid distracting from the content.
 - Roboto Slab and Quicksand were selected.
-- Later, Lilita One, was selected for the home page title for impact.
 
 <hr>
+
+### **Wireframe**
+- [wireframe](reservations/static/docs/Heading.png) 
+
 
 ### **Media**
 - [Heroku PostSQL](/) was used to sketch out the database models at an early stage.
