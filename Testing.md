@@ -64,6 +64,9 @@ All Python code has been run through the [CI PEP8 Testing](https://pep8ci.heroku
 #### **forms.py**
 ![forms-py](reservations/static/docs/validation-formspy.png)
 
+#### **urls.py**
+![urls-py](reservations/static/docs/validation-urlspy.png)
+
 ## Device Testing
 
 Device testing was conducted on a variety of phone models, including Samsung Galaxy A52, Oppo, iPhone 12, Huawei. The assistance of family members and friends was sought to perform the testing. This comprehensive approach ensured that the website was thoroughly evaluated on different devices and platforms, contributing to a more robust and user-friendly final product.
